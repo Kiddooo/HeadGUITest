@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "headguitest",
+  "version": "${version}",
+  "name": "HeadGUITest",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/headguitest/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.kiddo.headguitest.client.HeadguitestClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
