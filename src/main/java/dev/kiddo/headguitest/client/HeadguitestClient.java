@@ -43,7 +43,6 @@ public class HeadguitestClient implements ClientModInitializer {
     private static boolean isLoading = false;
     private static String errorMessage = null;
 
-    // New variable to store items waiting to be displayed
     private static List<ItemStack> pendingItems = null;
 
     @Override
@@ -70,8 +69,6 @@ public class HeadguitestClient implements ClientModInitializer {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             dispatcher.register(ClientCommandManager.literal("headgui")
                     .executes(context -> {
-
-                        // ... Checks for loading/error/empty ...
                         if (isLoading) {
                             context.getSource().sendFeedback(Text.literal("Still syncing config...").formatted(Formatting.YELLOW));
                             return 0;
@@ -85,7 +82,6 @@ public class HeadguitestClient implements ClientModInitializer {
                             return 0;
                         }
 
-                        // --- LAG PROOF LOGIC ---
                         try {
                             // 1. Prepare items
                             List<HeadData> randomizedData = new ArrayList<>(cachedHeadData);
@@ -106,7 +102,6 @@ public class HeadguitestClient implements ClientModInitializer {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                        // -----------------------
 
                         return 1;
                     }));

@@ -52,25 +52,25 @@ public class HeadFactory {
         if (data.shopName() != null && !data.shopName().isEmpty()) {
             loreLines.add(Text.literal("Shop Name: " + data.shopName())
                     .formatted(Formatting.GOLD)
-                    .styled(s -> s.withItalic(false))); // FIX: Disable Italics
+                    .styled(s -> s.withItalic(false)));
         }
 
         if (data.owner() != null && !data.owner().isEmpty()) {
             loreLines.add(Text.literal("Owner(s): " + data.owner())
                     .formatted(Formatting.GRAY)
-                    .styled(s -> s.withItalic(false))); // FIX: Disable Italics
+                    .styled(s -> s.withItalic(false)));
         }
 
         if (data.coords() != null && !data.coords().isEmpty()) {
             loreLines.add(Text.literal("Shop Coords: " + data.coords())
                     .formatted(Formatting.AQUA)
-                    .styled(s -> s.withItalic(false))); // FIX: Disable Italics
+                    .styled(s -> s.withItalic(false)));
         }
 
         if (data.note() != null && !data.note().isEmpty()) {
             loreLines.add(Text.literal("Note: " + data.note())
                     .formatted(Formatting.GREEN)
-                    .styled(s -> s.withItalic(false))); // FIX: Disable Italics
+                    .styled(s -> s.withItalic(false)));
         }
 
         if (!loreLines.isEmpty()) {
